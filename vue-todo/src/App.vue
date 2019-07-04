@@ -2,7 +2,7 @@
   <div>
     <h1>Todo Mvc</h1>
     <TodoForm @addTodo="addTodo"/>
-    <Todo @completed="completed" :todos="todos"/>
+    <Todo @completed="completed" :todos="todos" @deleteComment="deleteComment"/>
   </div>
 </template>
 
@@ -34,6 +34,9 @@ export default {
         isCompleted: false
       };
       this.todos.push(newTodo);
+    },
+    deleteComment(id) {
+      this.comments = this.comments.filter(item => item.id != id);
     },
     completed(todo) {
       // 更改数据内 某一个元素的 isCompleted 属性的属性值
