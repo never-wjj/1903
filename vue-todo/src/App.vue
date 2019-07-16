@@ -1,8 +1,13 @@
 <template>
   <div>
     <h1>Todo Mvc</h1>
+<<<<<<< HEAD
     <TodoForm @addTodo="addTodo"/>
     <Todo @completed="completed" :todos="todos" @deleteComment="deleteComment"/>
+=======
+    <TodoForm @addTodo="addTodo" />
+    <Todo @completed="completed" :todos="todos" />
+>>>>>>> upstream/master
   </div>
 </template>
 
