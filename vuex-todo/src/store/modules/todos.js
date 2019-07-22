@@ -47,7 +47,6 @@ const todos = {
     }
   },
   getters: {
-<<<<<<< HEAD
     showTodo(state, getters, rootState) {
       return state.all.filter(item => {
 //
@@ -67,7 +66,6 @@ const todos = {
     }
   }
 };
-=======
           : item.completed
       )
     },
@@ -76,6 +74,5 @@ const todos = {
     }
   }
 }
->>>>>>> upstream/master
 
 export default todos;

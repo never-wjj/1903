@@ -4,17 +4,9 @@ const filter = {
   },
   mutations: {
     changeType(state, type) {
-<<<<<<< HEAD
       state.type = type;
     }
   }
 };
-export default filter;
-=======
-      state.type = type
-    }
-  }
-}
 
-export default filter
->>>>>>> upstream/master
+export default filter;
