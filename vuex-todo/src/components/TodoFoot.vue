@@ -28,4 +28,8 @@ export default {
 .active {
   background-color: red;
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> upstream/master

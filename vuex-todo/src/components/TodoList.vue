@@ -34,8 +34,11 @@ export default {
 </script>
 
 <style>
-.c {
-  text-decoration: line-through;
+.del {
+  display: none;
+}
+.list li:hover .del {
+  display: inline-block;
 }
 .del {
   display: block;
