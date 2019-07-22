@@ -27,9 +27,16 @@ const todos = {
     },
     addTodo({ commit }, payload) {
       axios.post("http://localhost:3008/todos", payload.newTodo).then(res => {
+<<<<<<< HEAD
         commit("addTodo", res.data);
         payload.clear();
       });
+=======
+        commit("addTodo", res.data)
+        // 要执行清空 val 的 mutation
+        commit("clearInput")
+      })
+>>>>>>> upstream/master
     },
     delTodo({ commit }, payload) {
       axios.delete(`http://localhost:3008/todos/${payload.id}`).then(() => {
