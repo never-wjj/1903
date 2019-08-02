@@ -27,16 +27,10 @@ const todos = {
     },
     addTodo({ commit }, payload) {
       axios.post("http://localhost:3008/todos", payload.newTodo).then(res => {
-<<<<<<< HEAD
         commit("addTodo", res.data);
-        payload.clear();
-      });
-=======
-        commit("addTodo", res.data)
         // 要执行清空 val 的 mutation
-        commit("clearInput")
-      })
->>>>>>> upstream/master
+        commit("clearInput");
+      });
     },
     delTodo({ commit }, payload) {
       axios.delete(`http://localhost:3008/todos/${payload.id}`).then(() => {
@@ -54,32 +48,19 @@ const todos = {
     }
   },
   getters: {
-    showTodo(state, getters, rootState) {
-      return state.all.filter(item => {
-//
     showTodos(state, getters, rootState) {
       return state.all.filter(item =>
-// upstream/master
         rootState.filter.type === "all"
           ? true
           : rootState.filter.type === "active"
           ? !item.completed
-// HEAD
-          : item.completed;
-      });
+          : item.completed
+      );
     },
     activeNum(state) {
       return state.all.filter(item => !item.completed).length;
     }
   }
 };
-          : item.completed
-      )
-    },
-    activeNum(state) {
-      return state.all.filter(item => !item.completed).length
-    }
-  }
-}
 
 export default todos;
