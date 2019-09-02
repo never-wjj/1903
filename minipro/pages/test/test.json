@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "测试下拉刷新",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#fff",
+  "navigationBarTextStyle": "black"
+}
